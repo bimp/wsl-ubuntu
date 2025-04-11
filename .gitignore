@@ -33,11 +33,9 @@ terraforming/*
 tmp/*
 tbmk-*-linux/
 tbmk/*
-.bash_aliases
 .bash_history
 .bash_logout
 .bash_profile
-.bashrc
 .docker-*.sh
 .git-completion.bash
 .git-completion.sh
