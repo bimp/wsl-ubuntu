@@ -28,7 +28,6 @@
 .sigstore/*
 .vim/*
 credentials/*
-f7-data-analysis/*
 git-repos/*
 terraforming/*
 tmp/*
