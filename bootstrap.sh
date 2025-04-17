@@ -30,3 +30,7 @@ source "$INSTALL_SCRIPTS_DIR/bat-install.sh"
 
 # install tere directory navigation tool
 # https://github.com/mgunyho/tere
+
+
+# python stuff
+# install pip, uv
