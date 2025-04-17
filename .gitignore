@@ -21,6 +21,7 @@
 .terraform.d/*
 .virtualenvs/*
 .vscode-server/*
+.vscode-remote-containers/*
 .siege/*
 .sts4/*
 .tbmk/*
