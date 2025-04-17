@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# exit on any error
+set -e
+# exit on any pipeline errors
+set -o pipefail
+
 # initialize install-scripts directory
 INSTALL_SCRIPTS_DIR="$HOME/install-scripts"
 
