@@ -16,7 +16,7 @@ fi
 
 # apt stuff
 sudo -u root apt -y update
-sudo -u root apt install -y unzip tree jq openssl uuid ntp keychain
+sudo -u root apt install -y unzip tree jq openssl uuid ntpsec keychain
 sudo -u root apt install -y build-essential shellcheck cmdtest
 sudo -u root apt install -y apt-transport-https ca-certificates gnupg lsb-release
 
