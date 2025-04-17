@@ -20,6 +20,8 @@ sudo -u root apt install -y unzip tree jq openssl uuid ntpsec keychain
 sudo -u root apt install -y build-essential shellcheck cmdtest
 sudo -u root apt install -y apt-transport-https ca-certificates gnupg lsb-release
 
+# ssh and keychain stuff
+sudo -u bimp chmod 600 $HOME/.ssh/*
 
 # install hishtory - a better shell history
 # https://github.com/ddworken/hishtory
