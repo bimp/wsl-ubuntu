@@ -9,7 +9,7 @@ set -o pipefail # pipeline command is treated as failed, even if one command in 
 # MUST be run with command:
 # sudo -u USERNAME ./tere-install.sh
 
-echo "Installing tere..."
+echo -e "\nInstalling tere..."
 # install tere
 TEREVERSION="1.6.0"
 mkdir -p /tmp/tere

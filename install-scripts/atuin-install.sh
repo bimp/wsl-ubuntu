@@ -7,7 +7,7 @@ set -o pipefail # pipeline command is treated as failed, even if one command in 
 # install atuin - sync, search, backup shell history
 # https://atuin.sh
 # This script installs atuin using the official installation script.
-echo "Installing atuin..."
+echo -e "\nInstalling atuin..."
 # install only if ~/.atuin/bin/atuin does not exist
 if [ -f ~/.atuin/bin/atuin ]; then
     echo "atuin already installed. skipping installation."
