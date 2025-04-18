@@ -28,6 +28,10 @@ sudo -u root apt install -y apt-transport-https ca-certificates gnupg lsb-releas
 # ssh and keychain stuff
 sudo -u bimp chmod 600 $HOME/.ssh/*
 
+# set up /etc/default/locale file
+# see https://www.tecmint.com/set-system-locales-in-linux/
+cp ~/locale /etc/default/locale
+
 # install hishtory - a better shell history
 # https://github.com/ddworken/hishtory
 

@@ -1,0 +1,4 @@
+# install this file at /etc/default/locale
+# see https://www.tecmint.com/set-system-locales-in-linux/
+LANG=en_US.UTF-8
+LC_COLLATE=en_US.UTF-8
