@@ -116,7 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
 # ANYTHING BELOW THIS COMMENT ARE BIM'S ADDITION TO THIS .bashrc file
 
 # keychain initialization
@@ -135,6 +134,12 @@ git config --global core.fileMode false
 
 # atuin configuration
 . "$HOME/.atuin/bin/env"
-
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash --disable-up-arrow)"
+
+# tere configuration
+tere() {
+    local result=$(command tere "$@")
+    [ -n "$result" ] && cd -- "$result"
+}
+
