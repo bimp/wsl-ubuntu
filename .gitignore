@@ -28,6 +28,7 @@
 .tenv/*
 .sigstore/*
 .vim/*
+.atuin/*
 credentials/*
 git-repos/*
 terraforming/*
@@ -57,4 +58,5 @@ tbmk/*
 .zshrc
 .dotnet
 .java-version
+.bash-preexec.sh
 *.swp

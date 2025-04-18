@@ -132,3 +132,9 @@ git config --global user.name "Bim Paras"
 git config --global push.default simple
 git config --global alias.add-commit "!git add -A && git commit"
 git config --global core.fileMode false
+
+# atuin configuration
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"

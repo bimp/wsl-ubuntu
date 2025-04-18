@@ -31,6 +31,10 @@ sudo -u bimp chmod 600 $HOME/.ssh/*
 # install hishtory - a better shell history
 # https://github.com/ddworken/hishtory
 
+# install atuin - sync, search, backup shell history
+# https://atuin.sh
+source "$INSTALL_SCRIPTS_DIR/atuin-install.sh"
+
 # install 'bat' which is 'cat' replacement
 # https://github.com/sharkdp/bat
 source "$INSTALL_SCRIPTS_DIR/bat-install.sh"
