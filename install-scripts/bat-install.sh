@@ -4,6 +4,7 @@ set -o errexit # exits if error occurs
 set -o nounset # fails when accessing an unset variable
 set -o pipefail # pipeline command is treated as failed, even if one command in the pipeline fail
 
+echo "Installing bat..."
 sudo -u root apt install -y bat
 
 # the executable may be installed as batcat instead of bat (due to a name clash with another package). 
