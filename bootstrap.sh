@@ -30,7 +30,7 @@ sudo -u bimp chmod 600 $HOME/.ssh/*
 
 # set up /etc/default/locale file
 # see https://www.tecmint.com/set-system-locales-in-linux/
-cp ~/locale /etc/default/locale
+sudo -u root cp ~/locale /etc/default/locale
 
 # install hishtory - a better shell history
 # https://github.com/ddworken/hishtory
