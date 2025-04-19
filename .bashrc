@@ -153,6 +153,16 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
+# configure git shell prompt from
+# https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+if [ ! -f ~/.git-prompt.sh ]; then
+    echo -e "\n Installing ~/.git-prompt.sh..."
+    curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+fi
+# Source ~/.git-prompt.sh
+if [ -f ~/.git-prompt.sh ]; then
+    . ~/.git-prompt.sh
+fi
 
 # atuin configuration
 . "$HOME/.atuin/bin/env"
