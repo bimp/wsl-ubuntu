@@ -132,6 +132,20 @@ git config --global push.default simple
 git config --global alias.add-commit "!git add -A && git commit"
 git config --global core.fileMode false
 
+# git stuff
+# configure git-completion.bash from 
+# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+# Download git-completion.bash if it doesn't exist
+if [ ! -f ~/.git-completion.bash ]; then
+    echo -e "\n Installing git-completion..."
+    curl -o ~/.git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+fi
+# Source git-completion.bash
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+fi
+
+
 # atuin configuration
 . "$HOME/.atuin/bin/env"
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh

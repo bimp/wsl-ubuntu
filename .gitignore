@@ -39,9 +39,6 @@ tbmk/*
 .bash_logout
 .bash_profile
 .docker-*.sh
-.git-completion.bash
-.git-completion.sh
-.git-prompt.sh
 .gitconfig
 .motd_shown
 .npmrc
