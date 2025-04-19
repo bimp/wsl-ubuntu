@@ -116,7 +116,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+###############################################################
 # ANYTHING BELOW THIS COMMENT ARE BIM'S ADDITION TO THIS .bashrc file
+###############################################################
+
+# Configure PS1 prompt
+export PS1="\[\e[00;36m\]\u@\h\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;33m\]\w\[\e[0m\]\[\e[00;37m\]\n\\$\$(__git_ps1) \[\e[0m\]"
+
+# set default vim editor
+export EDITOR=/usr/bin/vim
 
 # keychain initialization
 HOSTNAME=`hostname`
