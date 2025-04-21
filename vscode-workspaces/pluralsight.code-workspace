@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "/home/bimp"
+		},
+		{
+			"path": "/home/bimp/git-repos/pluralsight"
 		}
 	],
 	"settings": {
