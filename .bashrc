@@ -120,6 +120,9 @@ fi
 # ANYTHING BELOW THIS COMMENT ARE BIM'S ADDITION TO THIS .bashrc file
 ###############################################################
 
+# alias commands
+alias refreshbash='source ~/.bashrc'
+
 # Configure PS1 prompt
 export PS1="\[\e[00;36m\]\u@\h\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;33m\]\w\[\e[0m\]\[\e[00;37m\]\n\\$\$(__git_ps1) \[\e[0m\]"
 
@@ -130,7 +133,10 @@ export EDITOR=/usr/bin/vim
 HOSTNAME=`hostname`
 keychain --agents "ssh"
 . $HOME/.keychain/$HOSTNAME-sh
-ssh-add $HOME/.ssh/github-bimp.pem 2> /dev/null
+# Add all .pem keys in the ~/.ssh/ directory
+for key in $HOME/.ssh/*.pem; do
+    [ -f "$key" ] && ssh-add "$key" 2>/dev/null
+done
 ssh-add -l
 
 # set some git config stuff
