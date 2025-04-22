@@ -51,3 +51,10 @@ source "$INSTALL_SCRIPTS_DIR/tere-install.sh"
 
 # python stuff
 # install pip, uv
+
+# install, configure aws stuff
+
+# install, configure docker stuff
+
+# install kubernetes stuff
+
