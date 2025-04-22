@@ -1,3 +1,5 @@
+alias refreshbash='source ~/.bashrc'
+
 # alias commands for git
 alias gs='git status'
 alias ga='git add'
