@@ -3,7 +3,6 @@ alias refreshbash='source ~/.bashrc'
 # alias commands for git
 alias gs='git status'
 alias ga='git add'
-#alias gd="GIT_PAGER='' git diff"
 alias gd="git diff"
 alias gaa='git add --all'
 alias gcm='git commit -m'

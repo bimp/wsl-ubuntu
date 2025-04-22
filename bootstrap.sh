@@ -56,5 +56,5 @@ source "$INSTALL_SCRIPTS_DIR/tere-install.sh"
 
 # install, configure docker stuff
 
-# install kubernetes stuff
+# install kubernetes, eks stuff
 
