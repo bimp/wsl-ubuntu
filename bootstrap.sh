@@ -5,6 +5,13 @@ set -e
 # exit on any pipeline errors
 set -o pipefail
 
+# Get the current user (works reliably even under sudo)
+if [ -n "$SUDO_USER" ]; then
+    CURRENT_USER="$SUDO_USER"
+else
+    CURRENT_USER="$(whoami)"
+fi
+
 # initialize install-scripts directory
 INSTALL_SCRIPTS_DIR="$HOME/install-scripts"
 
@@ -26,7 +33,7 @@ sudo -u root apt install -y build-essential shellcheck cmdtest
 sudo -u root apt install -y apt-transport-https ca-certificates gnupg lsb-release
 
 # ssh and keychain stuff
-sudo -u bimp chmod 600 $HOME/.ssh/*
+sudo -u $CURRENT_USER chmod 600 $HOME/.ssh/*
 
 # set up /etc/default/locale file
 # see https://www.tecmint.com/set-system-locales-in-linux/
