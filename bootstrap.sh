@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# exit on any error
-set -e
-# exit on any pipeline errors
-set -o pipefail
+
+set -o errexit # exits if error occurs
+set -o nounset # fails when accessing an unset variable
+set -o pipefail # pipeline command is treated as failed, even if one command in the pipeline fail
 
 # Get the current user (works reliably even under sudo)
-if [ -n "$SUDO_USER" ]; then
+# use Bash's parameter expansion to provide a default value when the variable is unset
+if [ -n "${SUDO_USER-}" ]; then
     CURRENT_USER="$SUDO_USER"
 else
     CURRENT_USER="$(whoami)"
