@@ -1,4 +1,5 @@
 alias refreshbash='source ~/.bashrc'
+alias lal='ls -al'
 
 # alias commands for git
 alias gs='git status'
