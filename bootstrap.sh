@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-set -o errexit # exits if error occurs
+# set -o errexit # exits if error occurs
 set -o nounset # fails when accessing an unset variable
 set -o pipefail # pipeline command is treated as failed, even if one command in the pipeline fail
 
@@ -59,10 +59,22 @@ source "$INSTALL_SCRIPTS_DIR/tere-install.sh"
 
 # python stuff
 # install pip, uv
+sudo -u root apt install -y python3-pip
+
+# verify version installations
+printf "\n python3 version:\n"
+/usr/bin/python3 --version
+printf "\n pip3 version:\n"
+pip3 --version
+
+# install python uv package and project manager
+# https://docs.astral.sh/uv/
+source "$INSTALL_SCRIPTS_DIR/uv-install.sh"
 
 # install, configure aws stuff
 
 # install, configure docker stuff
 
 # install kubernetes, eks stuff
+
 
