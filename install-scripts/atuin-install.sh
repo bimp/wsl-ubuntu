@@ -23,5 +23,9 @@ else
     sudo -u $CURRENT_USER curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 fi
 
+# install bash-preexec.sh to allow atuin to work with bash
+# https://docs.atuin.sh/guide/installation/#bash
+sudo -u $CURRENT_USER curl https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh -o ~/.bash-preexec.sh
+
 printf "\natuin version:\n"
 ~/.atuin/bin/atuin --version
