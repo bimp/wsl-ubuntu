@@ -72,6 +72,8 @@ pip3 --version
 source "$INSTALL_SCRIPTS_DIR/uv-install.sh"
 
 # install, configure aws stuff
+# https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+source "$INSTALL_SCRIPTS_DIR/awscli-install.sh"
 
 # install, configure docker stuff
 
