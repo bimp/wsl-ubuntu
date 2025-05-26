@@ -18,3 +18,10 @@ alias glo='git log --graph --oneline --decorate'
 alias glor='git log --oneline --reverse'
 alias grpo='git remote prune origin'
 alias grv='git remote -v'
+
+# note: --no-pager option retuns command back to the interactive shell prompt
+alias startdocker='sudo systemctl start docker.socket docker.service && \
+                    sudo systemctl status docker.service --no-pager'
+alias stopdocker='sudo systemctl stop docker.socket docker.service && \
+                    sudo systemctl status docker.service --no-pager'
+                    

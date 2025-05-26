@@ -32,6 +32,7 @@ sudo -u root apt -y update
 sudo -u root apt install -y unzip tree jq openssl uuid ntpsec keychain
 sudo -u root apt install -y build-essential shellcheck cmdtest
 sudo -u root apt install -y apt-transport-https ca-certificates gnupg lsb-release
+sudo -u root apt install -y software-properties-common
 
 # ssh and keychain stuff
 sudo -u $CURRENT_USER chmod 600 $HOME/.ssh/*
@@ -76,6 +77,7 @@ source "$INSTALL_SCRIPTS_DIR/uv-install.sh"
 source "$INSTALL_SCRIPTS_DIR/awscli-install.sh"
 
 # install, configure docker stuff
+source "$INSTALL_SCRIPTS_DIR/docker-install.sh"
 
 # install kubernetes, eks stuff
 
