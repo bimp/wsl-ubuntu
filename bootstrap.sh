@@ -79,6 +79,7 @@ source "$INSTALL_SCRIPTS_DIR/awscli-install.sh"
 # install, configure docker stuff
 source "$INSTALL_SCRIPTS_DIR/docker-install.sh"
 
-# install kubernetes, eks stuff
+# install eksctl
+source "$INSTALL_SCRIPTS_DIR/eksctl-install.sh"
 
 
