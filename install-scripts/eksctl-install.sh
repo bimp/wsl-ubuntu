@@ -17,19 +17,8 @@ EKSCTL_VERSION="0.208.0"
 EKSCTL_BIN="/usr/local/bin/eksctl"
 
 # Dynamically determine architecture
-UNAME_ARCH=$(uname -m)
-case "$UNAME_ARCH" in
-    x86_64)
-        ARCH="amd64"
-        ;;
-    aarch64 | arm64)
-        ARCH="arm64"
-        ;;
-    *)
-        echo "Unsupported architecture: $UNAME_ARCH"
-        exit 1
-        ;;
-esac
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ECS_ARCH="$("$SCRIPT_DIR/detect_arch.sh")"
 
 # Create and clean up temp directory
 TMP_DIR="/tmp/eksctl"

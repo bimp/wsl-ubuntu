@@ -75,6 +75,7 @@ source "$INSTALL_SCRIPTS_DIR/uv-install.sh"
 # install, configure aws stuff
 # https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 source "$INSTALL_SCRIPTS_DIR/awscli-install.sh"
+# install the ecs-cli command line tool
 
 # install, configure docker stuff
 source "$INSTALL_SCRIPTS_DIR/docker-install.sh"
