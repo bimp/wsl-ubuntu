@@ -10,8 +10,20 @@ set -o pipefail # pipeline command is treated as failed, even if one command in 
 # sudo -u USERNAME ./tere-install.sh
 
 echo -e "\nInstalling tere..."
-# install tere
+# Specify the tere version
+# releases can be found at https://github.com/mgunyho/tere/releases
 TEREVERSION="1.6.0"
+
+# Check if tere is already installed and matches the desired version
+if command -v /usr/local/bin/tere >/dev/null 2>&1; then
+    INSTALLED_VERSION=$(/usr/local/bin/tere -V 2>&1 | awk '{print $2}')
+    if [[ "$INSTALLED_VERSION" == "$TEREVERSION" ]]; then
+        echo "tere version $TEREVERSION is already installed. Exiting."
+        # If sourced, use return; if executed, use exit
+        (return 0 2>/dev/null) && return 0 || exit 0
+    fi
+fi
+
 mkdir -p /tmp/tere
 cd /tmp/tere
 if [ ! -f /tmp/tere/tere-${TEREVERSION}-x86_64-unknown-linux-gnu.zip ]; then
