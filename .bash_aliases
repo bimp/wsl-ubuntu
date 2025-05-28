@@ -25,3 +25,7 @@ alias startdocker='sudo systemctl start docker.socket docker.service && \
 alias stopdocker='sudo systemctl stop docker.socket docker.service && \
                     sudo systemctl status docker.service --no-pager'
                     
+# cd git top level dirs
+alias cdg='cd ~/git-repos'
+alias cdgrb='cd ~/git-repos/bim'
+
