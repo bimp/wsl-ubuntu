@@ -19,13 +19,18 @@ alias glor='git log --oneline --reverse'
 alias grpo='git remote prune origin'
 alias grv='git remote -v'
 
+# cd to gitrepos parent folder and git pull on subdirectories
+#alias gplrepos='cd ~/git-repos/;find ./bim ./work -type d -name .git -execdir sh -c "pwd && git pull && sleep 2.5" \;'
+
+# alias commands for docker interaction
 # note: --no-pager option retuns command back to the interactive shell prompt
 alias startdocker='sudo systemctl start docker.socket docker.service && \
                     sudo systemctl status docker.service --no-pager'
 alias stopdocker='sudo systemctl stop docker.socket docker.service && \
                     sudo systemctl status docker.service --no-pager'
+alias di='sudo docker images'
                     
 # cd git top level dirs
-alias cdg='cd ~/git-repos'
+alias cdgitrepos='cd ~/git-repos'
 alias cdgrb='cd ~/git-repos/bim'
 
