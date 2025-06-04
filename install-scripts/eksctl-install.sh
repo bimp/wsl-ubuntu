@@ -18,7 +18,7 @@ EKSCTL_BIN="/usr/local/bin/eksctl"
 
 # Dynamically determine architecture
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ECS_ARCH="$("$SCRIPT_DIR/detect_arch.sh")"
+ARCH="$("$SCRIPT_DIR/detect_arch.sh")"
 
 # Create and clean up temp directory
 TMP_DIR="/tmp/eksctl"
