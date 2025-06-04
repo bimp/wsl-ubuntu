@@ -83,6 +83,11 @@ source "$INSTALL_SCRIPTS_DIR/docker-install.sh"
 # install eksctl
 source "$INSTALL_SCRIPTS_DIR/eksctl-install.sh"
 
+# install node, npm stuff
+source "$INSTALL_SCRIPTS_DIR/node-npm-install.sh"
+
 # install terraform stuff
 # terraform, opentofu, terragrunt, tenv, terratest
+
+
 
