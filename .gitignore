@@ -39,7 +39,7 @@ tbmk/*
 .bash_logout
 .bash_profile
 .docker-*.sh
-.gitconfig
+.gitconfig*
 .motd_shown
 .npmrc
 .profile
