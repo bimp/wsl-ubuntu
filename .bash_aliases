@@ -1,4 +1,4 @@
-alias refreshbash='source ~/.bashrc && cd -'
+alias refreshbash='source ~/.bashrc'
 alias lal='ls -al'
 
 # alias commands for git

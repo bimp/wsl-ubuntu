@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "/home/bimp/git-repos/xops"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			// The vertical bar on the side with icons for Explorer, Search, etc
+			"activityBar.activeBackground": "#c88f74",
+			"activityBar.activeBorder": "#ec008e9c",
+			"activityBar.background": "#ec008e9c",
+			"activityBar.foreground": "#ffffff",
+			"activityBar.inactiveForeground": "#f3a9a9",
+			"activityBarBadge.background": "#dbbfa4",
+			"activityBarBadge.foreground": "#15202b",
+			// The top bar of VS Code
+			"titleBar.activeBackground": "#ec008e9c",
+			"titleBar.activeForeground": "#ffffff",
+			"titleBar.inactiveBackground": "#ec008e9c",
+			"titleBar.inactiveForeground": "#9f9f9f",
+			"commandCenter.border": "#e7e7e7d1",
+			"sash.hoverBorder": "#9e74c8",
+			// The bar at the bottom of the window
+			"statusBar.background": "#ec008e9c",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#f4bea5",
+			"statusBarItem.hoverForeground": "#000000",
+			"statusBarItem.remoteBackground": "#f4bea5",
+			"statusBarItem.remoteForeground": "#000000"
+		},
+		"peacock.remoteColor": "#844fba"
+	}
+}

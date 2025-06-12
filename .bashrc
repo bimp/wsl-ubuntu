@@ -137,11 +137,11 @@ done
 ssh-add -l
 
 # set some git config stuff
-git config --global user.email "bimp@bimparas.com"
-git config --global user.name "Bim Paras"
-git config --global push.default simple
-git config --global alias.add-commit "!git add -A && git commit"
-git config --global core.fileMode false
+#git config --global user.email "bimp@bimparas.com"
+#git config --global user.name "Bim Paras"
+#git config --global push.default simple
+#git config --global alias.add-commit "!git add -A && git commit"
+#git config --global core.fileMode false
 
 # git stuff
 # configure git-completion.bash from 
