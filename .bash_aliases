@@ -1,4 +1,3 @@
-alias refreshbash='source ~/.bashrc'
 alias lal='ls -al'
 
 # alias commands for git
@@ -6,7 +5,7 @@ alias gs='git status'
 alias ga='git add'
 alias gd="git diff"
 alias gaa='git add --all'
-alias gcm='git commit -m'
+alias gcm='git commit -m'G
 alias gacm='git add-commit -m'
 alias gchk='git checkout'
 alias gchkb='git checkout -b'
@@ -33,4 +32,52 @@ alias di='sudo docker images'
 # cd git top level dirs
 alias cdgitrepos='cd ~/git-repos'
 alias cdgrb='cd ~/git-repos/bim'
+
+# function and associated alias to refresh and source $HOME directory
+fn_refreshbash() {
+    local src_dir="$HOME/git-repos/bim/wsl-ubuntu"
+    local files=(
+        ".bash_aliases"
+        ".bashrc"
+        ".git-completion.bash"
+        ".git-prompt.sh"
+        ".gitignore"
+        ".vimrc"
+        "bootstrap.sh"
+        "locale"
+        "install-scripts"
+    )
+
+    if [[ ! -d "$src_dir" ]]; then
+        echo "Source directory $src_dir does not exist."
+        return 1
+    fi
+
+    for file in "${files[@]}"; do
+        local src="$src_dir/$file"
+        local dest="$HOME/$file"
+        if [[ -e "$src" ]]; then
+            if [[ -d "$src" ]]; then
+                rm -rf "$dest"   # CAREFUL: This deletes the destination directory first!
+                cp -r "$src" "$dest"
+            else
+                cp "$src" "$dest"
+            fi
+            echo "Copied $file to $HOME/"
+        else
+            echo "Warning: $file does not exist in $src_dir"
+        fi
+    done
+
+    # Source the new .bashrc
+    if [[ -f "$HOME/.bashrc" ]]; then
+        # shellcheck source=/dev/null
+        source "$HOME/.bashrc"
+        echo "Sourced $HOME/.bashrc"
+    else
+        echo "No .bashrc found in $HOME to source."
+    fi
+}
+
+alias refreshbash='fn_refreshbash'
 
