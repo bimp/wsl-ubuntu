@@ -35,7 +35,7 @@ alias cdgr="cd $git_repos_dir"
 alias cdgitrepos="cd $git_repos_dir"
 alias cdgrbim="cd $git_repos_dir/bim"
 alias cdgrwslubuntu="cd $git_repos_dir/bim/wsl-ubuntu"
-alias cdgrxops="cd $git_repos_dir/bim/xops"
+alias cdgrxops="cd $git_repos_dir/xops"
 
 # function and associated alias to refresh and source $HOME directory
 fn_refreshbash() {
