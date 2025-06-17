@@ -29,9 +29,11 @@ alias stopdocker='sudo systemctl stop docker.socket docker.service && \
                     sudo systemctl status docker.service --no-pager'
 alias di='sudo docker images'
                     
-# cd git top level dirs
-alias cdgitrepos='cd ~/git-repos'
-alias cdgrb='cd ~/git-repos/bim'
+# cd alias commands for git dirs
+local git_repos_dir="$HOME/git-repos/"
+alias cdgitrepos="cd $git_repos_dir"
+alias cdgrb="cd $git_repos_dir/bim"
+alias cdwslubuntu="cd $git_repos_dir/bim/wsl-ubuntu"
 
 # function and associated alias to refresh and source $HOME directory
 fn_refreshbash() {
