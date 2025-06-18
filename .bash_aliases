@@ -1,4 +1,5 @@
 alias lal='ls -al'
+alias rm='rm -i'
 
 # alias commands for git
 alias gs='git status'
