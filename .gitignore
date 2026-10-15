@@ -1,6 +1,7 @@
 .aws/*
 .cache/*
 .config/*
+.copilot/*
 .docker/*
 .dbus/*
 .ecr/*
